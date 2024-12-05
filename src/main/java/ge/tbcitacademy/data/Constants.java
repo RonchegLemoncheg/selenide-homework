@@ -20,5 +20,6 @@ public class Constants {
     public static final String MANAGEMENTTEXT = "End-to-end report management solution";
     public static final String TESTSTUDIOTEXT = "Telerik Test Studio Dev Edition";
     public static final String TELERIKLINK = "https://www.telerik.com/support/demos";
+    public static final String SKIPEXCEPTIONTEXT = "This test should run only on firefox";
 
 }
