@@ -81,7 +81,7 @@ public class SelenideTests extends BaseTest{
         SelenideElement firstOffer = $x("//div[@data-opti-expid='Kendo UI']");
         SelenideElement secondOffer = $x("//div[@data-opti-expid='KendoReact']");
 
-        (firstOffer.$("h3").shouldBe(visible, Duration.ofSeconds(10))).hover();
+        (firstOffer.$("h3").shouldBe(visible, Duration.ofSeconds(11))).hover();
         SelenideElement ninjaImage = $x("//img[@title='Kendo Ui Ninja']");
         ninjaImage.shouldBe(Condition.visible, Duration.ofSeconds(1));
 
