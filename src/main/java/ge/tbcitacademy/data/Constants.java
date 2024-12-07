@@ -1,7 +1,15 @@
 package ge.tbcitacademy.data;
 
 public class Constants {
-    public static final String USERNAME = "RonchegLemoncheg";
+
+    public static final String USERNAME = "Ronchegilius";
+    public static final String LASTNAME = "LEMONCHEG";
+    public static final String COMPANYNAME = "TBC";
+    public static final String PHONENUMBER = "555785617";
+    public static final String EMPTYSTRING = "";
+    public static final String COUNTRY = "Georgia";
+    public static final String CITY = "Kutaisi";
+    public static final String ZIPCODE = "0150";
     public static final String USEREMAIL = "jojoniousfanous@gmail.com";
     public static final String CURRENTADDRESS = "Akhalgazrdoba Ave. Lane 5/7";
     public static final String PERMANENTADDRESS = "Tbilisi Weretlis 55";
@@ -21,5 +29,8 @@ public class Constants {
     public static final String TESTSTUDIOTEXT = "Telerik Test Studio Dev Edition";
     public static final String TELERIKLINK = "https://www.telerik.com/support/demos";
     public static final String SKIPEXCEPTIONTEXT = "This test should run only on firefox";
+    public static final String BOOKSLINK = "https://demoqa.com/books";
+    public static final String BOOKNAME = "Git Pocket Guide";
+    public static final String PURPLECOLOR = "rgba(40, 46, 137, 0.75)";
 
 }
