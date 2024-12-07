@@ -1,6 +1,7 @@
 package ge.tbcitacademy.data;
 
 public class Constants {
+
     public static final String USERNAME = "Ronchegilius";
     public static final String LASTNAME = "LEMONCHEG";
     public static final String COMPANYNAME = "TBC";
