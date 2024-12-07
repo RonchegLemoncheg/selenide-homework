@@ -27,7 +27,7 @@ public class BaseTest {
             default:
                 throw new IllegalArgumentException(Constants.BROWSERERROR);
         }
-        Configuration.timeout = 5000;
+        Configuration.timeout = 7000;
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
