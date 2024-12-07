@@ -12,7 +12,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters("browserType")
-    public void setup(@Optional("chrome") String browserType) {
+    public void setup(@Optional("firefox") String browserType) {
         switch (browserType.toLowerCase()) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -27,7 +27,7 @@ public class BaseTest {
             default:
                 throw new IllegalArgumentException(Constants.BROWSERERROR);
         }
-        Configuration.timeout = 3000;
+        Configuration.timeout = 5000;
         WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 

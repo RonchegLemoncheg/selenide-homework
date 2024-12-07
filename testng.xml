@@ -5,13 +5,13 @@
     <test name="ChromeTest">
         <parameter name="browserType" value="chrome"/>
         <classes>
-            <class name="SelenideTests"/>
+            <class name="SelenideTests2"/>
         </classes>
     </test>
     <test name="FirefoxTest">
         <parameter name="browserType" value="firefox"/>
         <classes>
-            <class name="SelenideTests"/>
+            <class name="SelenideTests2"/>
         </classes>
     </test>
 </suite>
