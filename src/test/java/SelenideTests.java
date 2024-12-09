@@ -104,7 +104,7 @@ public class SelenideTests extends BaseTest {
         dropdown2.parent().$("h2").$x(".//span[@class='js-price']").shouldHave(text(Constants.JSPRICE2));
 
         // failing on purpose
-        Assert.assertEquals(2,3);
+        Assert.assertEquals(1,3);
 
     }
 
