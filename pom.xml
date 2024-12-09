@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>selenide-homework</artifactId>
+    <artifactId>_L17-Selenide-2024</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -31,8 +31,14 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.7.0</version>
-            <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-testng</artifactId>
+            <version>7.5.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

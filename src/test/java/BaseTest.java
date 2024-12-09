@@ -5,6 +5,7 @@ import ge.tbcitacademy.data.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
@@ -23,6 +24,11 @@ public class BaseTest {
                 WebDriverManager.chromedriver().setup();
                 WebDriverRunner.setWebDriver(new ChromeDriver());
                 Configuration.browser="chrome";
+                break;
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                WebDriverRunner.setWebDriver(new EdgeDriver());
+                Configuration.browser="edge";
                 break;
             default:
                 throw new IllegalArgumentException(Constants.BROWSERERROR);

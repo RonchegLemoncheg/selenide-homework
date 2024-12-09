@@ -103,6 +103,9 @@ public class SelenideTests extends BaseTest {
         dropdown1.parent().$("h2").$x(".//span[@class='js-price']").shouldHave(text(Constants.JSPRICE1));
         dropdown2.parent().$("h2").$x(".//span[@class='js-price']").shouldHave(text(Constants.JSPRICE2));
 
+        // failing on purpose
+        Assert.assertEquals(1,2);
+
     }
 
     @Test
@@ -124,6 +127,8 @@ public class SelenideTests extends BaseTest {
         $("#dropdown").getSelectedOption().shouldHave(text(Constants.PLEASESELECT));
         $("#dropdown").selectOption(Constants.OPTION2TEXT);
         $("#dropdown").getSelectedOption().shouldHave(text(Constants.OPTION2TEXT));
+        // failing on purpose
+        Assert.assertEquals(1,2);
     }
 
 
