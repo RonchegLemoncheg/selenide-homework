@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Selenide2TestSuite" thread-count="3" parallel="tests">
+    <listeners>
+        <listener class-name="ge.tbcitacademy.listeners.SuiteListener"/>
+        <listener class-name="ge.tbcitacademy.listeners.TestListener"/>
+    </listeners>
+    <test name="ChromeTest">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="SelenideTests2"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browserType" value="firefox"/>
+        <classes>
+            <class name="SelenideTests2"/>
+        </classes>
+    </test>
+    <test name="EdgeTest">
+        <parameter name="browserType" value="edge"/>
+        <classes>
+            <class name="SelenideTests2"/>
+        </classes>
+    </test>
+</suite>
