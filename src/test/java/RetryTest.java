@@ -7,7 +7,9 @@ public class RetryTest {
     @Test(retryAnalyzer = RetryAnalyzer.class)
     @RetryCount(count = 5)
     public void testMethodToRetry(){
+
         System.out.println("Retrying...");
+
         Assert.assertEquals(1,2);
     }
 }
