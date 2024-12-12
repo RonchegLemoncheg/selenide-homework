@@ -1,29 +1,18 @@
 import com.codeborne.selenide.*;
 import ge.tbcitacademy.data.Constants;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.*;
-import org.testng.asserts.SoftAssert;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.List;
 
-import static com.codeborne.selenide.CollectionCondition.*;
-import static com.codeborne.selenide.CollectionCondition.empty;
+import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class SelenideTests extends BaseTest {
-
-
     @Test
     public void validateBundleOffers() {
         open(Constants.TELERIKLINK);
@@ -67,7 +56,7 @@ public class SelenideTests extends BaseTest {
 
 
     @Test
-    public void validateIndividualOffers(){
+    public void validateIndividualOffers() {
         // sanam leqciaze shevidodi chromeze mushaobda da firefoxze ishviatad ara
         // leqcias rom movrchi exla firefoxze mushaobs da chromeze ara
         // kodistvis xeli ar mixlia
@@ -83,7 +72,8 @@ public class SelenideTests extends BaseTest {
         SelenideElement secondOffer = $x("//div[@data-opti-expid='KendoReact']");
 
         // es wesit internetis gamo maq
-        if(Configuration.browser.equals("chrome"))$x("//button[contains(text(), 'Accept Cookies')]").shouldBe(visible).click();
+        if (Configuration.browser.equals("chrome"))
+            $x("//button[contains(text(), 'Accept Cookies')]").shouldBe(visible).click();
 
         (firstOffer.$("div.Box-header")).shouldBe(visible).hover();
         SelenideElement ninjaImage = $x("//img[@title='Kendo Ui Ninja']");
@@ -104,11 +94,11 @@ public class SelenideTests extends BaseTest {
         dropdown2.parent().$("h2").$x(".//span[@class='js-price']").shouldHave(text(Constants.JSPRICE2));
 
         // failing on purpose
-        Assert.assertEquals(1,3);
+        Assert.assertEquals(1, 3);
 
     }
 
-    @Test
+    @Test(groups = "CheckBoxes-FrontEnd", priority = 2)
     public void checkBoxTest() {
         open(Constants.CHECKBOXLINK);
 
@@ -121,14 +111,14 @@ public class SelenideTests extends BaseTest {
     }
 
 
-    @Test
+    @Test(groups = "dropDown-FrontEnd", priority = 1)
     public void dropDownTest() {
         open(Constants.DROPDOWNTESTLINK);
         $("#dropdown").getSelectedOption().shouldHave(text(Constants.PLEASESELECT));
         $("#dropdown").selectOption(Constants.OPTION2TEXT);
         $("#dropdown").getSelectedOption().shouldHave(text(Constants.OPTION2TEXT));
         // failing on purpose
-        Assert.assertEquals(1,2);
+        Assert.assertEquals(1, 2);
     }
 
 
