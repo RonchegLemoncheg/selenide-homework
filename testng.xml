@@ -32,7 +32,7 @@
                 <class name="SelenideTests2"/>
             </classes>
         </test>
-    <test name="FrontEnd Tests">
+    <test name="FrontEnd-Tests">
         <parameter name="browserType" value="edge"/>
 <!--        - Change default execution sequence in dropDownTests. aq klashi shevcvale priority-->
 <!--es grupis definicia klashic miweria-->
