@@ -13,7 +13,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
                 .getAnnotation(RetryCount.class);
 
         if (counter < annotation.count()){
-            counter++;
+            counter=counter+1;
             return true;
         }
         return false;
