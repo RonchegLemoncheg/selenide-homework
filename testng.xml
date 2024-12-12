@@ -6,7 +6,7 @@
         <listener class-name="ge.tbcitacademy.listeners.TestListener"/>
     </listeners>
         <test name="Selenide Tests">
-            <parameter name="browserType" value="edge"/>
+            <parameter name="browserType" value="chrome"/>
             <groups>
 <!--                esec agretve shemedzlo rom klasebshi meqna, magram radganac ariyo dakonkretebuli aqve davtove-->
                 <define name="Selenide1">
@@ -33,7 +33,7 @@
             </classes>
         </test>
     <test name="FrontEnd-Tests">
-        <parameter name="browserType" value="edge"/>
+        <parameter name="browserType" value="chrome"/>
 <!--        - Change default execution sequence in dropDownTests. aq klashi shevcvale priority-->
 <!--es grupis definicia klashic miweria-->
         <groups>
