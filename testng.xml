@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="TestSuite" thread-count="2" parallel="tests">
-    <test name="ChromeTest">
-        <parameter name="browserType" value="chrome"/>
+<suite name="TestSuite" thread-count="3" parallel="tests">
+    <listeners>
+        <listener class-name="ge.tbcitacademy.listeners.SuiteListener"/>
+        <listener class-name="ge.tbcitacademy.listeners.TestListener"/>
+    </listeners>
+        <test name="Selenide Tests">
+            <parameter name="browserType" value="edge"/>
+            <groups>
+<!--                esec agretve shemedzlo rom klasebshi meqna, magram radganac ariyo dakonkretebuli aqve davtove-->
+                <define name="Selenide1">
+                    <include name="validateBundleOffers"/>
+                    <include name="validateIndividualOffers"/>
+                    <include name="checkBoxTest"/>
+                    <include name="dropDownTest"/>
+                    <include name="collectionsTest"/>
+                </define>
+                <define name="Selenide2">
+                    <include name="validateDemosDesign"/>
+                    <include name="validateOrderMechanics"/>
+                    <include name="chainedLocatorsTest"/>
+                    <include name="softAssertTest"/>
+                </define>
+                <define name="AllSelenideTests">
+                    <include name="Selenide1"/>
+                    <include name="Selenide2"/>
+                </define>
+            </groups>
+            <classes>
+                <class name="SelenideTests"/>
+                <class name="SelenideTests2"/>
+            </classes>
+        </test>
+    <test name="FrontEnd Tests">
+        <parameter name="browserType" value="edge"/>
+<!--        - Change default execution sequence in dropDownTests. aq klashi shevcvale priority-->
+<!--es grupis definicia klashic miweria-->
+        <groups>
+            <define name="CheckBoxes-FrontEnd">
+                <include name="checkBoxTest"/>
+            </define>
+            <define name="dropDown-FrontEnd">
+                <include name="dropDownTest"/>
+            </define>
+            <run>
+                <include name=".*FrontEnd"/>
+            </run>
+        </groups>
         <classes>
-            <class name="SelenideTests2"/>
-        </classes>
-    </test>
-    <test name="FirefoxTest">
-        <parameter name="browserType" value="firefox"/>
-        <classes>
-            <class name="SelenideTests2"/>
+            <class name="SelenideTests">
+            </class>
         </classes>
     </test>
 </suite>

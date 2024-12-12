@@ -168,6 +168,7 @@ public class SelenideTests2 extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(books.size(), 10);
         softAssert.assertEquals(books.get(0).$("span.mr-2").getText(),Constants.BOOKNAME);
+        softAssert.assertAll();
 
     }
 }
