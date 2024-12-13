@@ -32,5 +32,9 @@ public class Constants {
     public static final String BOOKSLINK = "https://demoqa.com/books";
     public static final String BOOKNAME = "Git Pocket Guide";
     public static final String PURPLECOLOR = "rgba(40, 46, 137, 0.75)";
-
+    public static final String PRICEMIN = "10";
+    public static final String PRICEMAX = "100";
+    public static final String SWOOPLINK = "https://swoop.ge";
+    public static final String SWOOPSPORTSLINK = "https://swoop.ge/category/110/sporti/";
+    public static final String FORMSLINK = "https://demoqa.com/automation-practice-form";
 }

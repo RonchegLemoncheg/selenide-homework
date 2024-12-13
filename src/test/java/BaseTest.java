@@ -13,7 +13,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters("browserType")
-    public void setup(@Optional("firefox") String browserType) {
+    public void setup(@Optional("chrome") String browserType) {
         switch (browserType.toLowerCase()) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();

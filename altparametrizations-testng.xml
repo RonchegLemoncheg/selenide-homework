@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FormTestSuite">
+
+    <test name="FormTest1">
+        <parameter name="firstName" value="Roncheg"/>
+        <parameter name="lastName" value="Lemoncheg"/>
+        <parameter name="gender" value="Male"/>
+        <parameter name="mobileNumber" value="1231231231"/>
+        <classes>
+            <class name="AlternativeParametrizations">
+                <methods>
+                    <include name="testUsingParameters"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="FormTest2">
+        <parameter name="firstName" value="Gverberg"/>
+        <parameter name="lastName" value="Gvainus"/>
+        <parameter name="gender" value="Male"/>
+        <parameter name="mobileNumber" value="1451671490"/>
+        <classes>
+            <class name="AlternativeParametrizations">
+                <methods>
+                    <include name="testUsingParameters"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="FormTest3">
+        <parameter name="firstName" value="Jens"/>
+        <parameter name="lastName" value="Kidman"/>
+        <parameter name="gender" value="Other"/>
+        <parameter name="mobileNumber" value="1451231251"/>
+        <classes>
+            <class name="AlternativeParametrizations">
+                <methods>
+                    <include name="testUsingParameters"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
